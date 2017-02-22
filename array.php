@@ -10,6 +10,11 @@
 
   $test_arr[] = "Kimmy";
 
+  echo "String from Array"." ".implode(":::", $test_arr);
+
+  echo "<br>";
+
+
   for ($i = 0; $i < count($test_arr); $i++) {
     echo $test_arr[$i]."<br>";
   }
@@ -45,9 +50,23 @@
   $it = "IT Alused";
 
    // 2 mõõtme maatriks
-  $marks = array("Maksim" => array($prog => 4, $OS => 5, $it => 5),
-            "Kim" => array($prog => 5, $OS => 5, $it => 5,),
-            "Aleksandr" => array($prog => 5, $OS => 3, $it => 4,));
+  $marks = array(
+              "Maksim" =>
+                      array(
+                          $prog => 4,
+                          $OS => 5,
+                          $it => 5),
+              "Kim" =>
+                      array(
+                          $prog => 5,
+                          $OS => 5,
+                          $it => 5,),
+              "Aleksandr" =>
+                      array(
+                          $prog => 5,
+                          $OS => 3,
+                          $it => 4,)
+              );
 
   $marks_id = array_keys($marks);
   $marks_nr = count($marks);
@@ -57,6 +76,51 @@
       echo $subject." : ".$mark."<br>";
     };
   }
+
+  //stringist massiviks
+  // kuidas saada stringist koma kätte eraldi, kui tal ühikut ees pole
+  $str = "Tere hommikust, täna meil on 6 tundi";
+  $rus = "Хеллоу ворлд";
+
+  echo $str.'<br>';
+  echo $rus.'<br>';
+  print_r(explode(" ",$str));
+  echo "<br>";
+  print_r(explode(", ",$rus));
+  echo "<br>";
+  print_r(str_split($str));
+  echo "<br>";
+  echo "<br>";
+  echo "<br>";
+
+  echo $_SERVER['PHP_SELF'];
+  echo "<br>";
+  echo "<br>";
+  echo $_SERVER['GATEWAY_INTERFACE'];
+  echo "<br>";
+  echo $_SERVER['SERVER_NAME'];
+  echo "<br>";
+  echo $_SERVER['SERVER_SOFTWARE'];
+  echo "<br>";
+  echo $_SERVER['SERVER_PROTOCOL'];
+  echo "<br>";
+  echo $_SERVER['REQUEST_METHOD'];
+  echo "<br>";
+  echo $_SERVER['REQUEST_TIME'];
+  echo "<br>";
+  echo $_SERVER['QUERY_STRING'];
+  echo "<br>";
+  echo $_SERVER['HTTP_ACCEPT'];
+  echo "<br>";
+  echo $_SERVER['HTTP_REFERER'];
+  echo "<br>";
+  echo $_SERVER['HTTP_USER_AGENT'];
+  echo "<br>";
+  echo $_SERVER['SCRIPT_FILENAME'];
+  echo "<br>";
+  echo $_SERVER['SERVER_PORT'];
+  echo "<br>";
+  //echo $_SERVER['SCRIPT_URI'];
 
 
 

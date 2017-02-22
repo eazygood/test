@@ -22,11 +22,18 @@ include "include.inc";
   menu($filter_arr);
 
   echo "<strong>Hello </strong> worldik<br>";
-  back_home();
+  echo '<br>';
   echo "<div></div>";
 
   currentTime();
+  echo "<br>";
+  counter();
+  echo "<br>";
+  GetUserIP();
+
 ?>
+
+
 
 </body>
 </html>

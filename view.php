@@ -1,8 +1,7 @@
 <?php
 
 
-
-$filter_arr = array("functions", "array", "view", "files");
+$filter_arr = array("functions", "array", "view", "file", "tips", "send", "upload", "junk");
 
 function menu($array) {
 
