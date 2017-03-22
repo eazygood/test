@@ -65,3 +65,5 @@ try {
 $output = 'Successfully updated ' . $affectedRows ;
 include 'output.html.php';
 */
+
+//--------------------- USE SELECT TABLE --------------------------------
