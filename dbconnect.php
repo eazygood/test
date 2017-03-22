@@ -67,3 +67,19 @@ include 'output.html.php';
 */
 
 //--------------------- USE SELECT TABLE --------------------------------
+
+try {
+  $sql = "SELECT *  FROM joke";
+  $result = $pdo->query($sql);
+} catch (PDOException $e) {
+  $error = 'Error while inserting jokes ' . $e-getMessage();
+  include 'error.html.php';
+  exit();
+}
+
+while ($row = $result->fetch())
+{
+  $jokes[] = $row['joketext'];
+}
+
+include 'jokes.html.php';
